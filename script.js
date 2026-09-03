@@ -2,23 +2,20 @@
 function checkPassword() {
     let input = document.getElementById("password").value.toLowerCase();
 
-    if (input ===  "soy pobre" , "soi pobre" , "soy povre"  , "zoi pobre" , "onichan uwu") {
+    if (input ===  "soy pobre" ) {
 
-        // Oculta contraseña
+       
         document.getElementById("screen1").classList.remove("active");
 
-        // Muestra caos de gatitos
         document.getElementById("screenVideo").classList.add("active");
 
         startVideoChaos();
 
-        // Después de 6 segundos...
+      
         setTimeout(() => {
 
-            // Oculta pantalla de gatitos
             document.getElementById("screenVideo").classList.remove("active");
 
-            // Muestra cumpleaños
             document.getElementById("birthdayScreen").style.display = "flex";
 
         }, 6000);
@@ -49,14 +46,14 @@ function startVideoChaos() {
         vid.loop = true;
         vid.muted = false;
 
-        // Primer gato grita, los demás respetan un poco
+       
         if (count === 0) {
             vid.volume = 1;
         } else {
             vid.volume = 0.2;
         }
 
-        // Posiciones aleatorias
+        
         vid.style.top = Math.random() * 80 + "%";
         vid.style.left = Math.random() * 80 + "%";
 
@@ -71,7 +68,7 @@ function startVideoChaos() {
     }, 500);
 
 
-    // Limpiar absolutamente todos los gatitos
+    
     setTimeout(() => {
 
         clearInterval(interval);
@@ -101,10 +98,10 @@ function irAlReproductor() {
 
 function holabuenastardes() {
 
-    // Oculta cumpleaños
+  
     document.getElementById("birthdayScreen").style.display = "none";
 
-    // Muestra pantalla final
+
     document.getElementById("screen3").classList.add("active");
 
 }
