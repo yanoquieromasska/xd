@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>clara</title>
+<link rel="stylesheet" href="mm.css">
+
+</head>
+
+<body>
+
+<!--- PANTALLA 1 -->
+<div id="screen1" class="screen active">
+    <marquee> <h2> Di que eres pobre </h2> </marquee>
+    <input id="password" placeholder="ola">
+    <button onclick="checkPassword()">Entrar</button>
+    <p id="msg"></p>
+</div>
+
+
+<div id="screenVideo" class="screen video-container">
+</div>
+
+
+<!-- PANTALLA 2 -->
+
+<div id="birthdayScreen">
+
+    <img src="videos/estrellas.gif" class="stars-gif">
+
+    <img src="videos/pastel.gif" class="cake-gif">
+
+    <div class="cumple-gif">
+        <a href="https://www.glitter-graphics.com/myspace/text_generator.php" target="_blank">
+            <img src="https://text.glitter-graphics.net/sc/j.gif">
+            <img src="https://text.glitter-graphics.net/sc/a.gif">
+            <img src="https://text.glitter-graphics.net/sc/p.gif">
+            <img src="https://text.glitter-graphics.net/sc/y.gif">
+
+            <img src="https://dl3.glitter-graphics.net/empty.gif" width="20">
+
+            <img src="https://text.glitter-graphics.net/sc/b.gif">
+            <img src="https://text.glitter-graphics.net/sc/e.gif">
+            <img src="https://text.glitter-graphics.net/sc/r.gif">
+            <img src="https://text.glitter-graphics.net/sc/d.gif">
+            <img src="https://text.glitter-graphics.net/sc/e.gif">
+
+            <img src="https://dl3.glitter-graphics.net/empty.gif" width="20">
+
+            <img src="https://text.glitter-graphics.net/sc/c.gif">
+            <img src="https://text.glitter-graphics.net/sc/l.gif">
+            <img src="https://text.glitter-graphics.net/sc/a.gif">
+            <img src="https://text.glitter-graphics.net/sc/r.gif">
+            <img src="https://text.glitter-graphics.net/sc/a.gif">
+
+    
+        </a>
+
+    <button id="nextBirthdayBtn" onclick="holabuenastardes()">
+    continuarrr
+</button> 
+
+    </div>
+
+</div>
+
+<!-- 🎧 PANTALLA 3 -->
+<div id="screen3" class="screen">
+    <h2>hola niña</h2>
+
+    <p class="final-text">
+        Fui una miserable. Se que escuchaste muchas cosas pero no son verdad. Nunca quise volver a hablarte ni pense en hacerlo jamás por la verguenza, <br>
+        me sigue sin cuadrar la idea, es muy extraño.<br> 
+        Me caes bien al igual que las demás (ya no te conozco, pero ajá), y esta vez estoy siendo sincera. <br>
+        No quiero mentir, no quiero mentirte, además ya no se como expresarme de esto sin terminar diciendo groserías (ya no digo btw, más bien estoy tratando de cambiar). <br>
+        Esto es raro porque en serio preferiria arrancarme los dientes qe hacerle una playlist a alguien <br>
+        No pienso hablar más, lukea el reproductor. <br>
+
+
+         pd: te pido porfavor ke no le digas de esto a nadie, a nadie, nadie, por favor. por favor. es la unica vaina ke te pido enkaresidamente  
+    </p>
+
+  <button onclick="irAlReproductor()">continuarrrrrrrr</button>
+
+</div>
+
+<!-- 🎵 PANTALLA 4: REPRODUCTOR -->
+
+<div id="screenPlayer">
+
+    <iframe 
+    src="reproductores/verdeprin/index.html"
+    class="player-frame">
+</iframe>
+
+
+<script src="script.js"></script>
+</body>
+</html>
