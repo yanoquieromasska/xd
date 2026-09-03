@@ -7,7 +7,7 @@ body {
   min-height: 100vh;
 }
 
-/* caja principal */
+
 .player-box {
   width: 520px;
   height: 270px;
@@ -18,7 +18,7 @@ body {
   position: relative;
 }
 
-/* header verde */
+
 .header {
   background: #008000;
   color: white;
@@ -26,21 +26,22 @@ body {
   font-weight: bold;
 }
 
-/* layout interno */
+
 .main {
   display: flex;
   gap: 10px;
   padding: 10px;
 }
 
-/* portada */
+
+
 .cover {
   width: 130px;
   border: 2px solid;
   border-color: #000 #fff #fff #000;
 }
 
-/* panel derecho */
+
 .right-panel {
   background: #c0c0c0;
   padding: 5px;
@@ -51,13 +52,13 @@ body {
   gap: 8px;
 }
 
-/* imagen tipo CD */
+
 .cd {
   width: 50px;
   align-self: center;
 }
 
-/* volumen */
+
 .volume {
   display: flex;
   align-items: center;
@@ -85,7 +86,6 @@ body {
   gap: 4px;
 }
 
-/* estilo botones retro */
 button {
   width: 32px;
   height: 32px;
@@ -126,13 +126,13 @@ button:active {
   background: #c0c0c0;
 
   border: 2px solid;
-  border-color: #fff #000 #000 #fff; /* efecto 3D retro */
+  border-color: #fff #000 #000 #fff; 
 
   font-size: 11px;
   text-align: center;
 }
 
-/* caja exterior gris */
+/* mendiga caja exterior gris */
 .info-box {
   width: 130px;
   padding: 3px;
@@ -142,18 +142,18 @@ button:active {
   border-color: #fff #000 #000 #fff;
 }
 
-/* “pantalla” interna blanca */
+/* interna blanca */
 .inner {
   background: white;
   padding: 2px;
 
   border: 2px solid;
-  border-color: #000 #fff #fff #000; /* invertido = hundido */
+  border-color: #000 #fff #fff #000; 
 
   font-size: 11px;
   text-align: left;
   
-  /* LAS LÍNEAS MÁGICAS: */
+
   overflow: hidden;       
   white-space: nowrap;  
 }
@@ -181,7 +181,7 @@ button:active {
   color: #333;
 }
 
-/* PANEL DE LA PLAYLIST */
+/* panle playlost */
 .playlist-panel{
    background: #c0c0c0;
   padding: 5px;
@@ -194,7 +194,7 @@ button:active {
   gap: 8px;
 }
 
-/* Lista */
+/* lista */
 .playlist{
   width: 100%;
   height: 100%;
@@ -208,7 +208,7 @@ button:active {
   box-sizing: border-box;
 }
 
-/* Canciones */
+/* las cancioones */
 .song{
   background: #c0c0c0;
 
@@ -240,7 +240,7 @@ button:active {
     border-color:#000 #fff #fff #000;
 }
 
-/* Barra de progreso */
+/* la barrarra de progreso */
 .progress-container{
     width:100%;
     height:5px;
@@ -275,9 +275,7 @@ button:active {
 
 
 
-/* ===========================
-   PLAYLIST Y LETRAS
-=========================== */
+/*apartado de playlist y letras*/
 
 .playlist-panel{
     width:150px;
@@ -293,7 +291,7 @@ button:active {
     overflow:hidden;
 }
 
-/* PLAYLIST */
+/* playlist de musicka*/
 
 .playlist{
     position:absolute;
@@ -329,7 +327,7 @@ button:active {
     color:white;
 }
 
-/* LETRA */
+/*letraaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa*/
 
 .lyrics-box{
 

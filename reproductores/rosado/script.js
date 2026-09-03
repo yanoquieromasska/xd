@@ -13,7 +13,6 @@ const lyricsEl = document.getElementById("lyrics");
 const lyricsBox = document.getElementById("lyrics-box");
 const backPlaylist = document.getElementById("back-playlist");
 
-// 🎵 TUS CANCIONES
 const songs = [
 { src: "music/disclaimer.mp3", cover: "fotos/lobo.png", title: "wawewiwowu", artist: "yo" , lyrics: "lyrics/disclaimer.html" },
   { src: "music/balidao.mp3", cover: "fotos/balidao.png", title: "Ba Li Dao - 誰先愛上他的(電影原聲帶)", artist: "DJ Didilong" , lyrics: "lyrics/balidao.txt" },
@@ -40,12 +39,12 @@ const songs = [
   { src: "music/virus2.mp3", cover: "fotos/sin.png", title: "Sin Disfraz - Locura", artist: "Virus" , lyrics: "lyrics/sin.txt" }
 ];
 
-// estado 
+ 
 let currentSong = 1;
 let shuffle = false;
 let volume = 0.5;
 
-// volumen inicial
+
 audio.volume = volume;
 volLevel.style.width = (volume * 100) + "%";
 
@@ -75,7 +74,7 @@ progressContainer.addEventListener("click", (e) => {
 
 });
 
-// tiempo alabergaaaaa
+// tiempo 
 function formatTime(seconds){
 
     const minutes = Math.floor(seconds / 60);
@@ -111,7 +110,9 @@ async function loadLyrics(path) {
 
 }
 
-// cargar canción
+
+
+
 function loadSong(index) {
   audio.src = songs[index].src;
   cover.src = songs[index].cover;
@@ -135,7 +136,7 @@ function loadSong(index) {
   });
 }
 
-// siguiente
+
 function nextSong() {
   if (shuffle) {
     currentSong = Math.floor(Math.random() * songs.length);
@@ -146,14 +147,14 @@ function nextSong() {
   audio.play();
 }
 
-// anterior
+
 function prevSong() {
   currentSong = (currentSong - 1 + songs.length) % songs.length;
   loadSong(currentSong);
   audio.play();
 }
 
-// el play
+
 document.getElementById("play").onclick = () => {
 
   if (!audio.src || audio.src === window.location.href) {
@@ -164,7 +165,7 @@ document.getElementById("play").onclick = () => {
 
 };
 
-// la pausa
+
 document.getElementById("pause").onclick = () => audio.pause();
 
 // siguienteatras
@@ -211,10 +212,10 @@ item.onclick = () => {
     currentSong = index;
 
     if (audio.src.includes(songs[index].src)) {
-        // si ya está sonando esta canción, solo abre letra
+        
         loadLyrics(songs[index].lyrics);
     } else {
-        // si es otra canción, cambia y reproduce
+        
         loadSong(currentSong);
 
         audio.onloadeddata = () => {
@@ -233,10 +234,9 @@ item.onclick = () => {
 
 
 
-// cargar la primera canción
 cover.src = "fotos/gato.png";
 
-// autoplay siguiente
+
 audio.addEventListener("ended", nextSong);
 
 backPlaylist.onclick = () => {

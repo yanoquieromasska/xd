@@ -22,7 +22,7 @@ body {
   background-repeat: no-repeat;
 }
 
-/* header verde */
+
 .header{
     position: relative;
     background: #c991ab;
@@ -32,21 +32,21 @@ body {
     text-align: left;
 }
 
-/* layout interno */
+
 .main {
   display: flex;
   gap: 10px;
   padding: 10px;
 }
 
-/* portada */
+
 .cover {
   width: 130px;
   border: 2px solid;
   border-color: #7c7176 #fff #fff #7c7176;
 }
 
-/* panel derecho */
+
 .right-panel {
   background: #ffffff;
   padding: 5px;
@@ -55,20 +55,20 @@ body {
   display: flex;
   flex-direction: column;
   gap: 8px;
-background-image: url("fotos/fotocoquete.png"); /* 👈 Carga tu foto aquí */
-  background-size: cover;       /* 👈 Hace que cubra todo el fondo blanco */
-  background-position: center;  /* 👈 Centra la imagen */
-  background-repeat: no-repeat; /* 👈 Evita que se repita */
+background-image: url("fotos/fotocoquete.png"); 
+  background-size: cover;       
+  background-position: center;  
+  background-repeat: no-repeat; 
 
 }
 
-/* imagen tipo CD */
+
 .cd {
   width: 50px;
   align-self: center;
 }
 
-/* volumen */
+
 .volume {
   display: flex;
   align-items: center;
@@ -89,14 +89,14 @@ background-image: url("fotos/fotocoquete.png"); /* 👈 Carga tu foto aquí */
   background: #be82a0;
 }
 
-/* botones */
+
 .buttons {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 4px;
 }
 
-/* estilo botones retro */
+
 button {
   width: 32px;
   height: 32px;
@@ -130,20 +130,20 @@ button:active {
 
 
 
-/* cajas de autor y artista */
+
 .info-box {
   width: 130px;
   padding: 3px;
   background: #8a6a7a;
 
   border: 2px solid;
-  border-color: #fff #7c7176 #7c7176 #fff; /* efecto 3D retro */
+  border-color: #fff #7c7176 #7c7176 #fff; 
 
   font-size: 11px;
   text-align: center;
 }
 
-/* caja exterior gris */
+
 .info-box {
   width: 130px;
   padding: 3px;
@@ -153,7 +153,7 @@ button:active {
   border-color: #fff #7c7176 #7c7176 #fff;
 }
 
-/* “pantalla” interna blanca */
+
 .inner {
   background: white;
   padding: 2px;
@@ -162,17 +162,17 @@ button:active {
   font-size: 11px;
   text-align: left;
   
-  /* LAS LÍNEAS MÁGICAS: */
-  overflow: hidden;       /* Esconde lo que se salga de la cajita */
-  white-space: nowrap;    /* Obliga al texto a quedarse en una sola línea */
+
+  overflow: hidden;       
+  white-space: nowrap;    
 }
 
-/* Aplica la animación directo al título */
+
 #title {
   font-weight: bold;
   display: inline-block;
-  padding-left: 100%;     /* Empieza fuera de la cajita */
-  animation: marquee 15s linear infinite; /* Rueda eternamente cada 10 segundos */
+  padding-left: 100%;    
+  animation: marquee 15s linear infinite; 
 }
 
 @keyframes marquee {
@@ -180,7 +180,7 @@ button:active {
   100% { transform: translate3d(-100%, 0, 0); }
 }
 
-/* estilos texto */
+
 #title {
   font-weight: bold;
 }
@@ -190,9 +190,8 @@ button:active {
   color: #333;
 }
 
-/* hisjdnaij////////////////////
+/* hisjdnaij */
 
-/* PANEL DE LA PLAYLIST */
 .playlist-panel{
    background: #c0c0c0;
   padding: 5px;
@@ -205,7 +204,9 @@ button:active {
   gap: 8px;
 }
 
-/* Lista */
+
+
+
 .playlist{
   width: 100%;
   height: 100%;
@@ -219,7 +220,7 @@ button:active {
   box-sizing: border-box;
 }
 
-/* Canciones */
+
 .song{
   background: #c0c0c0;
 
@@ -251,7 +252,9 @@ button:active {
     border-color:#7c7176 #fff #fff #7c7176;
 }
 
-/* Barra de progreso */
+
+
+
 .progress-container{
     width:100%;
     height:5px;
@@ -286,9 +289,6 @@ button:active {
 
 
 
-/* ===========================
-   PLAYLIST Y LETRAS
-=========================== */
 
 .playlist-panel{
     width:150px;
@@ -304,7 +304,7 @@ button:active {
     overflow:hidden;
 }
 
-/* PLAYLIST */
+
 
 .playlist{
     position:absolute;
@@ -340,7 +340,11 @@ button:active {
     color:white;
 }
 
-/* LETRA */
+
+
+
+
+
 
 .lyrics-box{
 
@@ -413,7 +417,7 @@ button:active {
     position: absolute;
     top: 2px;
     right: 6px;
-    width: 24px;   /* ajusta el tamaño */
+    width: 24px;   
     height: auto;
 }
 

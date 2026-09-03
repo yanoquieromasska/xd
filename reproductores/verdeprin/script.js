@@ -13,7 +13,7 @@ const lyricsEl = document.getElementById("lyrics");
 const lyricsBox = document.getElementById("lyrics-box");
 const backPlaylist = document.getElementById("back-playlist");
 
-// 🎵 TUS CANCIONES
+
 const songs = [
   { src: "music/disclaimer.mp3", cover: "fotos/lobo.png", title: "wawewiwowu", artist: "yo" , lyrics: "lyrics/disclaimer.html" },
   { src: "music/balidao.mp3", cover: "fotos/balidao.png", title: "Ba Li Dao - 誰先愛上他的(電影原聲帶)", artist: "DJ Didilong" , lyrics: "lyrics/balidao.txt" },
@@ -75,7 +75,7 @@ progressContainer.addEventListener("click", (e) => {
 
 });
 
-// tiempo alabergaaaaa
+// tiempo aaaaaaaaa
 function formatTime(seconds){
 
     const minutes = Math.floor(seconds / 60);
@@ -111,7 +111,12 @@ async function loadLyrics(path) {
 
 }
 
-// cargar canción
+
+
+
+
+
+
 function loadSong(index) {
   audio.src = songs[index].src;
   cover.src = songs[index].cover;
@@ -211,10 +216,10 @@ item.onclick = () => {
     currentSong = index;
 
     if (audio.src.includes(songs[index].src)) {
-        // si ya está sonando esta canción, solo abre letra
+        
         loadLyrics(songs[index].lyrics);
     } else {
-        // si es otra canción, cambia y reproduce
+        
         loadSong(currentSong);
 
         audio.onloadeddata = () => {
@@ -233,10 +238,9 @@ item.onclick = () => {
 
 
 
-// cargar la primera canción
 cover.src = "fotos/cover.png";
 
-// autoplay siguiente
+
 audio.addEventListener("ended", nextSong);
 
 backPlaylist.onclick = () => {

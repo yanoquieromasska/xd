@@ -1,4 +1,4 @@
-// 🔐 CONTRASEÑA + INICIO DEL CAOS
+
 function checkPassword() {
     let input = document.getElementById("password").value.toLowerCase();
 
@@ -29,9 +29,9 @@ function checkPassword() {
 }
 
 
-//////////////////////////////////////////////////
-// 🐈 GATITOS DEL CAOS
-//////////////////////////////////////////////////
+
+
+
 
 function startVideoChaos() {
 
@@ -94,9 +94,10 @@ function irAlReproductor() {
     window.location.href ="reproductores/verdeprin/index.html";
 }
 
-//////////////////////////////////////////////////
-// 🎧 PANTALLA FINAL
-//////////////////////////////////////////////////
+
+
+
+
 
 function holabuenastardes() {
 
