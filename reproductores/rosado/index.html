@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>clara coquette</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <img src="fotos/estrellas.gif" class="stars-gif">
+
+<div class="player-box">
+
+  <!-- BARRA SUPERIOR -->
+  <div class="header">
+    
+    <span> cancionero (version coket) </span>
+
+  <img src="fotos/lazote.gif" class="lazo">
+
+</div> 
+  <div class="main">
+
+    <div class="left-panel">
+
+      <!-- IMAGEN PRIMERO -->
+      <img src="fotos/gato.png" class="cover">
+
+      <!-- LUEGO LOS CUADROS -->
+      <div class="info-box">
+        <div class="inner">
+          <span id="title">Título</span>
+        </div>
+      </div>
+
+      <div class="info-box">
+        <div class="inner">
+          <span id="artist">Artista</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- PANEL DERECHO -->
+    <div class="right-panel">
+
+      <!-- CD decorativo -->
+      <img src="fotos/cd.png" class="cd">
+
+      <!-- VOLUMEN -->
+      <div class="volume">
+        <button id="vol-down">−</button>
+
+        <div class="vol-bar">
+          <div id="vol-level"></div>
+        </div>
+
+        <button id="vol-up">+</button>
+      </div>
+
+      <!-- BOTONES -->
+      <div class="buttons">
+        <button id="prev">⏮</button>
+        <button id="play">▶</button>
+        <button id="pause">⏸</button>
+        <button id="next">⏭</button>
+        <button id="back10">⟲</button>
+        <button id="forward10">⟳</button>
+        <button id="shuffle">⇄</button>
+      </div>
+
+      <!-- Barra -->
+      <div class="progress-container">
+        <div id="progress"></div>
+      </div>
+
+      <!-- Tiempo -->
+      <div class="time">
+        <span id="current-time">0:00</span>
+        <span id="duration">0:00</span>
+      </div>
+
+    </div>
+
+    <!-- PANEL PLAYLIST -->
+    <div class="playlist-panel">
+
+      <div class="playlist" id="playlist"></div>
+
+      <!-- LETRA -->
+      <div class="lyrics-box" id="lyrics-box" style="display:none;">
+
+        <div class="lyrics-header">
+          <button id="back-playlist">◄</button>
+          <span>letra</span>
+        </div>
+
+        <div id="lyrics"></div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<!-- AUDIO (JS lo controla) -->
+<audio id="audio"></audio>
+
+<!-- SCRIPT (SIEMPRE AL FINAL) -->
+<script src="script.js"></script>
+
+</body>
+</html>

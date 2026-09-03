@@ -1,0 +1,429 @@
+body {
+  background: #fdeafd;
+  font-family: "MS Sans Serif", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.player-box {
+  width: 520px;
+  height: 270px;
+  background: #ffd2e8;
+
+  border: 2px solid #7c7176;
+  border-radius: 12px;
+  overflow: hidden;
+
+  background-image: url("fotos/sakura.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* header verde */
+.header{
+    position: relative;
+    background: #c991ab;
+    color: white;
+    padding: 5px;
+    font-weight: bold;
+    text-align: left;
+}
+
+/* layout interno */
+.main {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+}
+
+/* portada */
+.cover {
+  width: 130px;
+  border: 2px solid;
+  border-color: #7c7176 #fff #fff #7c7176;
+}
+
+/* panel derecho */
+.right-panel {
+  background: #ffffff;
+  padding: 5px;
+  border: 3px solid;
+  border-color: #fff #7c7176 #7c7176 #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+background-image: url("fotos/fotocoquete.png"); /* 👈 Carga tu foto aquí */
+  background-size: cover;       /* 👈 Hace que cubra todo el fondo blanco */
+  background-position: center;  /* 👈 Centra la imagen */
+  background-repeat: no-repeat; /* 👈 Evita que se repita */
+
+}
+
+/* imagen tipo CD */
+.cd {
+  width: 50px;
+  align-self: center;
+}
+
+/* volumen */
+.volume {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.vol-bar {
+  width: 80px;
+  height: 10px;
+  background: #808080;
+  border: 2px solid;
+  border-color: #fff #7c7176 #7c7176 #fff;
+}
+
+#vol-level {
+  height: 100%;
+  width: 50%;
+  background: #be82a0;
+}
+
+/* botones */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4px;
+}
+
+/* estilo botones retro */
+button {
+  width: 32px;
+  height: 32px;
+  background: #c991ab;
+  border: 2px solid;
+  border-color: #fff #7c7176 #7c7176 #fff;
+  cursor: pointer;
+}
+
+button:active {
+  border-color: #7c7176 #fff #fff #7c7176;
+}
+
+.song-info {
+  margin-top: 5px;
+  text-align: center;
+  font-size: 12px;
+}
+
+
+.left-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+
+
+
+
+
+
+/* cajas de autor y artista */
+.info-box {
+  width: 130px;
+  padding: 3px;
+  background: #8a6a7a;
+
+  border: 2px solid;
+  border-color: #fff #7c7176 #7c7176 #fff; /* efecto 3D retro */
+
+  font-size: 11px;
+  text-align: center;
+}
+
+/* caja exterior gris */
+.info-box {
+  width: 130px;
+  padding: 3px;
+  background: #8a6a7a;
+
+  border: 2px solid;
+  border-color: #fff #7c7176 #7c7176 #fff;
+}
+
+/* “pantalla” interna blanca */
+.inner {
+  background: white;
+  padding: 2px;
+  border: 2px solid;
+  border-color: #7c7176 #fff #fff #7c7176;
+  font-size: 11px;
+  text-align: left;
+  
+  /* LAS LÍNEAS MÁGICAS: */
+  overflow: hidden;       /* Esconde lo que se salga de la cajita */
+  white-space: nowrap;    /* Obliga al texto a quedarse en una sola línea */
+}
+
+/* Aplica la animación directo al título */
+#title {
+  font-weight: bold;
+  display: inline-block;
+  padding-left: 100%;     /* Empieza fuera de la cajita */
+  animation: marquee 15s linear infinite; /* Rueda eternamente cada 10 segundos */
+}
+
+@keyframes marquee {
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-100%, 0, 0); }
+}
+
+/* estilos texto */
+#title {
+  font-weight: bold;
+}
+
+#artist {
+  font-size: 10px;
+  color: #333;
+}
+
+/* hisjdnaij////////////////////
+
+/* PANEL DE LA PLAYLIST */
+.playlist-panel{
+   background: #c0c0c0;
+  padding: 5px;
+  width: 300px;
+  height: 210px ;
+  border: 2px solid;
+  border-color: #fff #7c7176 #7c7176 #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Lista */
+.playlist{
+  width: 100%;
+  height: 100%;
+
+  background: white;
+
+  border: 2px solid;
+  border-color: #7c7176 #fff #fff #7c7176;
+
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+/* Canciones */
+.song{
+  background: #c0c0c0;
+
+  border: 2px solid;
+  border-color: #fff #7c7176 #7c7176 #fff;
+
+  padding: 3px 5px;
+  margin: 3px;
+
+  font-size: 11px;
+  cursor: pointer;
+  user-select: none;
+
+  box-sizing: border-box;
+}
+
+.song:hover{
+  background: #be82a0;
+  color: white;
+}
+
+.playlist{
+  overflow-y: scroll;
+}
+
+.song.active{
+    background:#be82a0;
+    color:white;
+    border-color:#7c7176 #fff #fff #7c7176;
+}
+
+/* Barra de progreso */
+.progress-container{
+    width:100%;
+    height:5px;
+
+    background:#c0c0c0;
+
+    border:2px solid;
+    border-color:#7c7176 #fff #fff #7c7176;
+
+    margin-top:5px;
+    cursor:pointer;
+}
+
+#progress{
+    width:0%;
+    height:100%;
+    background:#be82a0;
+}
+
+.time{
+    display:flex;
+    justify-content:space-between;
+    font-size:10px;
+    margin-top:2px;
+    font-family:"MS Sans Serif", sans-serif;
+}
+
+
+
+
+
+
+
+
+/* ===========================
+   PLAYLIST Y LETRAS
+=========================== */
+
+.playlist-panel{
+    width:150px;
+    height:210px;
+
+    background:#c0c0c0;
+
+    border:2px solid;
+    border-color:#fff #7c7176 #7c7176 #fff;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+/* PLAYLIST */
+
+.playlist{
+    position:absolute;
+
+    inset:0;
+
+    overflow-y:auto;
+
+    background:#c0c0c0;
+}
+
+.song{
+    padding:4px;
+
+    margin:2px;
+
+    font-size:11px;
+
+    cursor:pointer;
+
+    border:2px solid;
+    border-color:#fff #7c7176 #7c7176 #fff;
+
+    background:#c0c0c0;
+}
+
+.song:hover{
+    background:#d8d8d8;
+}
+
+.song.active{
+    background:#be82a0;
+    color:white;
+}
+
+/* LETRA */
+
+.lyrics-box{
+
+    position:absolute;
+
+    inset:0;
+
+    display:none;
+
+    background:white;
+
+    box-sizing:border-box;
+
+    overflow-y:auto;
+
+}
+
+.lyrics-header{
+
+    position:sticky;
+
+    top:0;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:6px;
+
+    padding:4px;
+
+    font-size: 12px;
+
+    background:#c0c0c0;
+
+    border-bottom:2px solid;
+    border-color:#fff #7c7176 #7c7176 #fff;
+
+    z-index:5;
+
+}
+
+#back-playlist{
+
+    width: 22px;
+    height: 22px;
+
+    font-size:10px;
+
+    padding:0;
+
+}
+
+#lyrics{
+
+    margin:6px;
+
+    white-space:pre-wrap;
+
+    word-break:break-word;
+
+    font-size:11px;
+
+    font-family:"MS Sans Serif", sans-serif;
+
+}
+
+.lazo
+{
+    position: absolute;
+    top: 2px;
+    right: 6px;
+    width: 24px;   /* ajusta el tamaño */
+    height: auto;
+}
+
+.stars-gif {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    pointer-events: none;
+}
