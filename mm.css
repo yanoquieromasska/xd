@@ -147,7 +147,7 @@ input {
 #nextBirthdayBtn {
     position: relative;
     top: 50px;
-    right: 300px;
+    right: auto;
     z-index: 5;
     margin-top: 25px;
     padding: 10px 25px;
