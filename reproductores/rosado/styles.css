@@ -488,29 +488,7 @@ button:active {
 }
 
 /* En pantallas pequeñas */
-@media (max-width: 600px) {
+@media (max-width: 700px) , (max-height: 700px) {
 
-    body {
-        overflow-x: hidden;
-    }
-
-    .player-box {
-        width: 95vw;
-        height: 270px;
-    }
-
-    .main {
-        gap: 5px;
-        padding: 7px;
-    }
-
-    .cover {
-        width: 110px;
-    }
-
-    .playlist-panel {
-        width: 140px;
-        min-width: 140px;
-        height: 210px;
-    }
+  
 }

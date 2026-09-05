@@ -501,29 +501,6 @@ button:active {
 }
 
 /* En pantallas pequeñas */
-@media (max-width: 700px) {
+@media (max-width: 700px) , (max-height: 700px) {
 
-    body {
-        overflow-x: hidden;
-    }
-
-    .player-box {
-        width: 95vw;
-        left: 0;
-    }
-
-    .main {
-        transform: scale(0.9);
-        transform-origin: top center;
-    }
-
-    .erizo-gif {
-        left: 0;
-    }
-
-    .el-contenedoruwu {
-        left: 0;
-        top: 0;
-        width: 90vw;
-    }
 }
