@@ -433,6 +433,50 @@ button:active {
 }
 
 
-@media (max-width: 1000px) , (max-height: 700px) {
+/* --- AGREGA ESTO AL FINAL DE TU CSS PARA REEMPLAZAR LA MEDIA QUERY VACÍA --- */
 
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+    align-items: flex-start; /* Permite hacer scroll hacia abajo si es largo */
+    min-height: auto;
+  }
+
+  .player-box {
+    width: 100%;       /* Ocupa el ancho disponible del celular */
+    max-width: 360px;  /* Evita que se estire demasiado en pantallas medianas */
+    height: auto;      /* Deja que crezca hacia abajo según su contenido */
+    overflow: visible; /* Evita que se corten las cosas al ponerse en vertical */
+  }
+
+  .main {
+    flex-direction: column; /* Apila el panel izquierdo y derecho verticalmente */
+    align-items: center;
+    gap: 15px;
+  }
+
+  .left-panel {
+    width: 100%;
+    align-items: center;
+  }
+
+  .right-panel {
+    width: 100%;
+    box-sizing: border-box; /* Evita que el borde sume ancho extra */
+  }
+
+  .playlist-panel {
+    width: 100%;       /* Hace que la playlist ocupe todo el ancho del panel */
+    height: 180px;     /* Reducimos un poco la altura para que no sea eterno */
+  }
+
+  .cover {
+    width: 150px;      /* Hacemos la portada un poquito más grande y visible */
+    height: auto;
+  }
+
+  .info-box {
+    width: 100%;       /* La cajita de texto se adapta al ancho disponible */
+    box-sizing: border-box;
+  }
 }
