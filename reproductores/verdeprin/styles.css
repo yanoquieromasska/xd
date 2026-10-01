@@ -9,22 +9,18 @@ body {
     overflow-x: hidden; 
 }
 
-/* ==========================================================================
-   CONTENEDOR NUEVO (PADRE) - CENTRA TODO EL ESCENARIO EN EL CELULAR
-   ========================================================================== */
+
 .contenedor-padre {
     display: flex;
     flex-direction: column;
     align-items: center; 
     gap: 15px;          
     position: relative;
-    width: 100%;             /* 🟢 AGREGA ESTO: Ocupa todo el ancho disponible */
-    max-width: 100vw;        /* 🟢 AGREGA ESTO: Evita que se salga de la pantalla */
-    box-sizing: border-box;  /* 🟢 AGREGA ESTO: Controla los márgenes internos */
+    width: 100%;             
+    max-width: 100vw;        
+    box-sizing: border-box;  
 }
-/* ==========================================================================
-   REPRODUCTOR PRINCIPAL
-   ========================================================================== */
+
 .player-box { 
     width: 520px; 
     height: 270px; 
@@ -35,9 +31,7 @@ body {
     flex-shrink: 0; 
 }
 
-/* ==========================================================================
-   CABECERA STYLE WINDOWS 95
-   ========================================================================== */
+
 .header { 
     background: #008000; 
     color: white; 
@@ -45,16 +39,14 @@ body {
     font-weight: bold; 
 }
 
-/* ==========================================================================
-   CONTENIDO INTERNO DEL REPRODUCTOR
-   ========================================================================== */
+
 .main { 
     display: flex; 
     gap: 10px; 
     padding: 10px; 
 }
 
-/* PANEL IZQUIERDO (PORTADA Y TEXTOS) */
+
 .left-panel { 
     display: flex; 
     flex-direction: column; 
@@ -90,7 +82,8 @@ body {
     white-space: nowrap; 
 }
 
-/* TÍTULO EN MOVIMIENTO (MARQUEE) */
+
+
 #title { 
     font-weight: bold; 
     display: inline-block; 
@@ -108,7 +101,7 @@ body {
     color: #333; 
 }
 
-/* PANEL DERECHO (CONTROLES Y TIEMPO) */
+
 .right-panel { 
     background: #c0c0c0; 
     padding: 5px; 
@@ -125,7 +118,6 @@ body {
     align-self: center; 
 }
 
-/* VOLUMEN */
 .volume { 
     display: flex; 
     align-items: center; 
@@ -146,7 +138,7 @@ body {
     background: green; 
 }
 
-/* BOTONES DEL REPRODUCTOR */
+
 .buttons { 
     display: grid; 
     grid-template-columns: repeat(4, 1fr); 
@@ -166,7 +158,7 @@ button:active {
     border-color: #000 #fff #fff #000; 
 }
 
-/* BARRA DE PROGRESO DE LA MÚSICA */
+
 .progress-container { 
     width: 100%; 
     height: 5px; 
@@ -191,9 +183,7 @@ button:active {
     font-family: "MS Sans Serif", sans-serif; 
 }
 
-/* ==========================================================================
-   PANEL DE PLAYLIST Y LETRAS
-   ========================================================================== */
+
 .playlist-panel { 
     width: 150px; 
     height: 210px; 
@@ -239,7 +229,7 @@ button:active {
     border-color: #000 #fff #fff #000; 
 }
 
-/* CUADRO DE LETRAS */
+
 .lyrics-box { 
     position: absolute; 
     inset: 0; 
@@ -281,9 +271,7 @@ button:active {
     font-family: "MS Sans Serif", sans-serif; 
 }
 
-/* ==========================================================================
-   MENÚ DE LOS TRES PUNTOS (TEMAS)
-   ========================================================================== */
+
 .menu-tema { 
     position: absolute; 
     top: 5px; 
@@ -323,9 +311,7 @@ button:active {
     white-space: normal; 
 }
 
-/* ==========================================================================
-   ELEMENTOS DE ADORNO EXTERNOS (TEXTO UWU Y ERIZO)
-   ========================================================================== */
+
 .el-contenedoruwu p { 
     margin: 0; 
     color: white; 
@@ -347,12 +333,7 @@ button:active {
     pointer-events: none; 
 }
 
-/* ==========================================================================
-   RESPONSIVE - ACHICA TODO EN CONJUNTO EN TABLETS Y CELULARES
-   ========================================================================== */
-/* ==========================================================================
-   RESPONSIVE CORREGIDO - EVITA QUE SE CORTE LA PARTE DERECHA
-   ========================================================================== */
+
 @media (max-width: 600px) { 
     body { 
         min-height: 100vh; 
@@ -360,20 +341,18 @@ button:active {
         align-items: center;
     } 
     .contenedor-padre { 
-        /* Usamos zoom en lugar de scale porque el zoom adapta los bordes 
-           automáticamente en los navegadores móviles de forma limpia */
+        
         zoom: 0.65; 
     } 
 }
 
-/* Celulares un poco más grandes */
 @media (min-width: 401px) and (max-width: 600px) { 
     .contenedor-padre { 
         zoom: 0.75; 
     } 
 }
 
-/* Tablets (Como la de tu amiga) */
+
 @media (min-width: 601px) and (max-width: 900px) { 
     .contenedor-padre { 
         zoom: 0.88; 
