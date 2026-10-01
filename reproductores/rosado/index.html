@@ -2,114 +2,94 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>clara coquette</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-  <img src="fotos/estrellas.gif" class="stars-gif">
+  <!-- 1. CREAMOS EL MISMO CONTENEDOR PADRE QUE AGRUPA TODO -->
+  <div class="contenedor-padre">
 
-<div class="player-box">
-
-  
-  <div class="header">
+    <!-- El reproductor va en el centro -->
+    <div class="player-box">
     
-    <span> cancionero (version coket) </span>
+      <div class="header">
+        <span> cancionero (version coket) </span>
+        <img src="fotos/lazote.gif" class="lazo">
+      </div> 
 
-  <img src="fotos/lazote.gif" class="lazo">
+      <div class="main">
+        <div class="left-panel">
+          <!-- Tu portada de gato coquette -->
+          <img src="fotos/gato.png" class="cover">
+          
+          <div class="info-box">
+            <div class="inner">
+              <span id="title">Título</span>
+            </div>
+          </div>
 
-</div> 
-  <div class="main">
+          <div class="info-box">
+            <div class="inner">
+              <span id="artist">Artista</span>
+            </div>
+          </div>
+        </div>
 
-    <div class="left-panel">
+        <div class="right-panel">
+          <img src="fotos/cd.png" class="cd">
+          
+          <div class="volume">
+            <button id="vol-down">−</button>
+            <div class="vol-bar">
+              <div id="vol-level"></div>
+            </div>
+            <button id="vol-up">+</button>
+          </div>
 
-      
-      <img src="fotos/gato.png" class="cover">
+          <div class="buttons">
+            <button id="prev">⏮</button>
+            <button id="play">▶</button>
+            <button id="pause">❚❚</button>
+            <button id="next">⏭</button>
+            <button id="back10">⟲</button>
+            <button id="forward10">⟳</button>
+            <button id="shuffle">⇄</button>
+          </div>
 
-      
-      <div class="info-box">
-        <div class="inner">
-          <span id="title">Título</span>
+          <div class="progress-container">
+            <div id="progress"></div>
+          </div>
+
+          <div class="time">
+            <span id="current-time">0:00</span>
+            <span id="duration">0:00</span>
+          </div>
+        </div>
+
+        <div class="playlist-panel">
+          <div class="playlist" id="playlist"></div>
+          
+          <div class="lyrics-box" id="lyrics-box" style="display:none;">
+            <div class="lyrics-header">
+              <button id="back-playlist">◄</button>
+              <span>letra</span>
+            </div>
+            <div id="lyrics"></div>
+          </div>
         </div>
       </div>
-
-      <div class="info-box">
-        <div class="inner">
-          <span id="artist">Artista</span>
-        </div>
-      </div>
-
     </div>
 
-    
-    <div class="right-panel">
+    <!-- Movemos el GIF de las estrellas aquí abajo o dentro del flujo para que no flote descontrolado -->
+    <img src="fotos/estrellas.gif" class="stars-gif">
 
-      
-      <img src="fotos/cd.png" class="cd">
+  </div> <!-- AQUÍ CIERRA EL CONTENEDOR PADRE -->
 
-      
-      <div class="volume">
-        <button id="vol-down">−</button>
-
-        <div class="vol-bar">
-          <div id="vol-level"></div>
-        </div>
-
-        <button id="vol-up">+</button>
-      </div>
-
-      
-      <div class="buttons">
-        <button id="prev">⏮</button>
-        <button id="play">▶</button>
-        <button id="pause">❚❚</button>
-        <button id="next">⏭</button>
-        <button id="back10">⟲</button>
-        <button id="forward10">⟳</button>
-        <button id="shuffle">⇄</button>
-      </div>
-
-      
-      <div class="progress-container">
-        <div id="progress"></div>
-      </div>
-
-      
-      <div class="time">
-        <span id="current-time">0:00</span>
-        <span id="duration">0:00</span>
-      </div>
-
-    </div>
-
-    
-    <div class="playlist-panel">
-
-      <div class="playlist" id="playlist"></div>
-
-      
-      <div class="lyrics-box" id="lyrics-box" style="display:none;">
-
-        <div class="lyrics-header">
-          <button id="back-playlist">◄</button>
-          <span>letra</span>
-        </div>
-
-        <div id="lyrics"></div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</div>
-
-<audio id="audio"></audio>
-
-<script src="script.js"></script>
+  <audio id="audio"></audio>
+  <script src="script.js"></script>
 
 </body>
 </html>

@@ -1,3 +1,6 @@
+/* ==========================================================================
+   CONFIGURACIÓN GENERAL Y FONDO
+   ========================================================================== */
 body {
   background: #fdeafd;
   font-family: "MS Sans Serif", sans-serif;
@@ -5,40 +8,76 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
 }
 
+/* ==========================================================================
+   CONTENEDOR NUEVO (PADRE) - MANTIENE TODO ALINEADO AL CENTRO
+   ========================================================================== */
+.contenedor-padre {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  gap: 15px;          
+  position: relative;
+  z-index: 2; /* Se asegura de estar encima del GIF de estrellas */
+}
+
+/* ==========================================================================
+   REPRODUCTOR PRINCIPAL
+   ========================================================================== */
 .player-box {
   width: 520px;
   height: 270px;
   background: #ffd2e8;
-
   border: 2px solid #7c7176;
   border-radius: 12px;
   overflow: hidden;
-
   background-image: url("fotos/sakura.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  position: relative;
+  flex-shrink: 0;
 }
 
-
-.header{
-    position: relative;
-    background: #c991ab;
-    color: white;
-    padding: 5px;
-    font-weight: bold;
-    text-align: left;
+/* ==========================================================================
+   CABECERA VERSION COQUETTE
+   ========================================================================== */
+.header {
+  position: relative;
+  background: #c991ab;
+  color: white;
+  padding: 5px;
+  font-weight: bold;
+  text-align: left;
 }
 
+.lazo {
+  position: absolute;
+  top: 2px;
+  right: 6px;
+  width: 24px;   
+  height: auto;
+}
 
+/* ==========================================================================
+   CONTENIDO INTERNO DEL REPRODUCTOR
+   ========================================================================== */
 .main {
   display: flex;
   gap: 10px;
   padding: 10px;
 }
 
+/* PANEL IZQUIERDO (PORTADA GATO Y TITULOS) */
+.left-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
 
 .cover {
   width: 130px;
@@ -46,7 +85,47 @@ body {
   border-color: #7c7176 #fff #fff #7c7176;
 }
 
+.info-box {
+  width: 130px;
+  padding: 3px;
+  background: #8a6a7a;
+  border: 2px solid;
+  border-color: #fff #7c7176 #7c7176 #fff;
+  font-size: 11px;
+  text-align: center;
+  box-sizing: border-box;
+}
 
+.inner {
+  background: white;
+  padding: 2px;
+  border: 2px solid;
+  border-color: #7c7176 #fff #fff #7c7176;
+  font-size: 11px;
+  text-align: left;
+  overflow: hidden;       
+  white-space: nowrap;    
+}
+
+/* TEXTO EN MOVIMIENTO (MARQUEE) */
+#title {
+  font-weight: bold;
+  display: inline-block;
+  padding-left: 100%;    
+  animation: marquee 15s linear infinite; 
+}
+
+@keyframes marquee {
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-100%, 0, 0); }
+}
+
+#artist {
+  font-size: 10px;
+  color: #333;
+}
+
+/* PANEL DERECHO (CONTROLES COQUETTE) */
 .right-panel {
   background: #ffffff;
   padding: 5px;
@@ -55,20 +134,19 @@ body {
   display: flex;
   flex-direction: column;
   gap: 8px;
-background-image: url("fotos/fotocoquete.png"); 
+  background-image: url("fotos/fotocoquete.png"); 
   background-size: cover;       
   background-position: center;  
   background-repeat: no-repeat; 
-
+  flex-shrink: 0;
 }
-
 
 .cd {
   width: 50px;
   align-self: center;
 }
 
-
+/* VOLUMEN */
 .volume {
   display: flex;
   align-items: center;
@@ -89,13 +167,12 @@ background-image: url("fotos/fotocoquete.png");
   background: #be82a0;
 }
 
-
+/* BOTONES DE CONTROL */
 .buttons {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 4px;
 }
-
 
 button {
   width: 32px;
@@ -110,395 +187,151 @@ button:active {
   border-color: #7c7176 #fff #fff #7c7176;
 }
 
-.song-info {
-  margin-top: 5px;
-  text-align: center;
-  font-size: 12px;
-}
-
-
-.left-panel {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4px;
-}
-
-
-
-
-
-
-
-
-.info-box {
-  width: 130px;
-  padding: 3px;
-  background: #8a6a7a;
-
-  border: 2px solid;
-  border-color: #fff #7c7176 #7c7176 #fff; 
-
-  font-size: 11px;
-  text-align: center;
-}
-
-
-.info-box {
-  width: 130px;
-  padding: 3px;
-  background: #8a6a7a;
-
-  border: 2px solid;
-  border-color: #fff #7c7176 #7c7176 #fff;
-}
-
-
-.inner {
-  background: white;
-  padding: 2px;
-  border: 2px solid;
-  border-color: #7c7176 #fff #fff #7c7176;
-  font-size: 11px;
-  text-align: left;
-  
-
-  overflow: hidden;       
-  white-space: nowrap;    
-}
-
-
-#title {
-  font-weight: bold;
-  display: inline-block;
-  padding-left: 100%;    
-  animation: marquee 15s linear infinite; 
-}
-
-@keyframes marquee {
-  0% { transform: translate3d(0, 0, 0); }
-  100% { transform: translate3d(-100%, 0, 0); }
-}
-
-
-#title {
-  font-weight: bold;
-}
-
-#artist {
-  font-size: 10px;
-  color: #333;
-}
-
-/* hisjdnaij */
-
-.playlist-panel{
-   background: #c0c0c0;
-  padding: 5px;
-  width: 300px;
-  height: 210px ;
-  border: 2px solid;
-  border-color: #fff #7c7176 #7c7176 #fff;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-
-
-
-.playlist{
+/* PROGRESO Y TIEMPO */
+.progress-container {
   width: 100%;
-  height: 100%;
-
-  background: white;
-
+  height: 5px;
+  background: #c0c0c0;
   border: 2px solid;
   border-color: #7c7176 #fff #fff #7c7176;
-
-  overflow-y: auto;
-  box-sizing: border-box;
+  margin-top: 5px;
+  cursor: pointer;
 }
 
+#progress {
+  width: 0%;
+  height: 100%;
+  background: #be82a0;
+}
 
-.song{
+.time {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  margin-top: 2px;
+  font-family: "MS Sans Serif", sans-serif;
+}
+
+/* ==========================================================================
+   PANEL DE PLAYLIST Y LETRAS
+   ========================================================================== */
+.playlist-panel {
+  width: 150px;
+  height: 210px;
   background: #c0c0c0;
-
   border: 2px solid;
   border-color: #fff #7c7176 #7c7176 #fff;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
 
-  padding: 3px 5px;
-  margin: 3px;
+.playlist {
+  position: absolute;
+  inset: 0;
+  overflow-y: auto;
+  background: #c0c0c0;
+}
 
+.song {
+  background: #c0c0c0;
+  border: 2px solid;
+  border-color: #fff #7c7176 #7c7176 #fff;
+  padding: 4px;
+  margin: 2px;
   font-size: 11px;
   cursor: pointer;
   user-select: none;
-
   box-sizing: border-box;
 }
 
-.song:hover{
+.song:hover {
   background: #be82a0;
   color: white;
 }
 
-.playlist{
-  overflow-y: scroll;
+.song.active {
+  background: #be82a0;
+  color: white;
+  border-color: #7c7176 #fff #fff #7c7176;
 }
 
-.song.active{
-    background:#be82a0;
-    color:white;
-    border-color:#7c7176 #fff #fff #7c7176;
+/* LETRAS */
+.lyrics-box {
+  position: absolute;
+  inset: 0;
+  display: none;
+  background: white;
+  box-sizing: border-box;
+  overflow-y: auto;
 }
 
-
-
-
-.progress-container{
-    width:100%;
-    height:5px;
-
-    background:#c0c0c0;
-
-    border:2px solid;
-    border-color:#7c7176 #fff #fff #7c7176;
-
-    margin-top:5px;
-    cursor:pointer;
+.lyrics-header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px;
+  font-size: 12px;
+  background: #c0c0c0;
+  border-bottom: 2px solid;
+  border-color: #fff #7c7176 #7c7176 #fff;
+  z-index: 5;
 }
 
-#progress{
-    width:0%;
-    height:100%;
-    background:#be82a0;
+#back-playlist {
+  width: 22px;
+  height: 22px;
+  font-size: 10px;
+  padding: 0;
 }
 
-.time{
-    display:flex;
-    justify-content:space-between;
-    font-size:10px;
-    margin-top:2px;
-    font-family:"MS Sans Serif", sans-serif;
+#lyrics {
+  margin: 6px;
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-size: 11px;
+  font-family: "MS Sans Serif", sans-serif;
 }
 
-
-
-
-
-
-
-
-
-.playlist-panel{
-    width:150px;
-    height:210px;
-
-    background:#c0c0c0;
-
-    border:2px solid;
-    border-color:#fff #7c7176 #7c7176 #fff;
-
-    position:relative;
-
-    overflow:hidden;
-}
-
-
-
-.playlist{
-    position:absolute;
-
-    inset:0;
-
-    overflow-y:auto;
-
-    background:#c0c0c0;
-}
-
-.song{
-    padding:4px;
-
-    margin:2px;
-
-    font-size:11px;
-
-    cursor:pointer;
-
-    border:2px solid;
-    border-color:#fff #7c7176 #7c7176 #fff;
-
-    background:#c0c0c0;
-}
-
-.song:hover{
-    background:#d8d8d8;
-}
-
-.song.active{
-    background:#be82a0;
-    color:white;
-}
-
-
-
-
-
-
-
-.lyrics-box{
-
-    position:absolute;
-
-    inset:0;
-
-    display:none;
-
-    background:white;
-
-    box-sizing:border-box;
-
-    overflow-y:auto;
-
-}
-
-.lyrics-header{
-
-    position:sticky;
-
-    top:0;
-
-    display:flex;
-
-    align-items:center;
-
-    gap:6px;
-
-    padding:4px;
-
-    font-size: 12px;
-
-    background:#c0c0c0;
-
-    border-bottom:2px solid;
-    border-color:#fff #7c7176 #7c7176 #fff;
-
-    z-index:5;
-
-}
-
-#back-playlist{
-
-    width: 22px;
-    height: 22px;
-
-    font-size:10px;
-
-    padding:0;
-
-}
-
-#lyrics{
-
-    margin:6px;
-
-    white-space:pre-wrap;
-
-    word-break:break-word;
-
-    font-size:11px;
-
-    font-family:"MS Sans Serif", sans-serif;
-
-}
-
-.lazo
-{
-    position: absolute;
-    top: 2px;
-    right: 6px;
-    width: 24px;   
-    height: auto;
-}
-
+/* ==========================================================================
+   GIF DE ESTRELLAS DE FONDO
+   ========================================================================== */
 .stars-gif {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    pointer-events: none;
+  position: fixed; /* Cambiado a fixed para que cubra toda la pantalla de fondo */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  z-index: 1; /* Se queda al fondo de todo */
+  pointer-events: none;
 }
 
-
-/* --- AGREGA ESTO AL FINAL DE TU CSS PARA REEMPLAZAR LA MEDIA QUERY VACÍA --- */
-
-
+/* ==========================================================================
+   RESPONSIVE - REDUCE EL REPRODUCTOR COMPLETO SIN DEFORMARLO
+   ========================================================================== */
 @media (max-width: 600px) {
   body {
-    padding: 5px;
-    align-items: center; /* Lo mantiene centrado en la pantalla */
     min-height: 100vh;
   }
-
-  .player-box {
-    width: 100%;        /* Se adapta al ancho del celular */
-    max-width: 480px;   /* Evita que se pase del límite */
-    height: auto;       /* Permite que el contenido dicte la altura justa */
-    min-height: 210px;  /* Reducimos un poco la altura general */
-    background-size: cover;
+  .contenedor-padre {
+    transform: scale(0.65); /* Escala para celulares pequeños */
+    transform-origin: center center;
   }
+}
 
-  .main {
-    display: flex;
-    flex-direction: row; /* ¡ESTA ES LA CLAVE! Se mantiene en horizontal */
-    gap: 6px;            /* Espacio más pequeño entre paneles */
-    padding: 6px;
+/* Celulares un poco más grandes */
+@media (min-width: 401px) and (max-width: 600px) {
+  .contenedor-padre {
+    transform: scale(0.75);
   }
+}
 
-  /* Ajustamos el panel izquierdo (Portada e Info) */
-  .left-panel {
-    width: 35%;          /* Le damos un porcentaje fijo del espacio horizontal */
-    gap: 2px;
-  }
-
-  .cover {
-    width: 100%;         /* La portada se encoge proporcionalmente */
-    height: auto;
-  }
-
-  .info-box, .inner {
-    width: 100%;         /* Las cajitas de texto se adaptan al panel izquierdo */
-    box-sizing: border-box;
-    font-size: 9px;      /* Letra un poquito más pequeña para que no se desborde */
-  }
-
-  /* Ajustamos el panel derecho (Controles y Playlist) */
-  .right-panel {
-    width: 65%;          /* Toma el resto del espacio horizontal */
-    gap: 4px;
-    padding: 3px;
-    box-sizing: border-box;
-  }
-
-  .playlist-panel {
-    width: 100%;         /* La playlist se estira a lo ancho de su panel */
-    height: 120px;       /* Reducimos su altura para que encaje horizontalmente */
-  }
-
-  /* Encogemos un poco los botones y volumen para celulares */
-  .buttons {
-    gap: 2px;
-  }
-
-  button {
-    width: 26px;         /* Botones ligeramente más pequeños para dedos en celular */
-    height: 26px;
-  }
-
-  .vol-bar {
-    width: 60px;         /* Barra de volumen un poco más corta */
+/* Tablets (La pantalla de tu amiga) */
+@media (min-width: 601px) and (max-width: 900px) {
+  .contenedor-padre {
+    transform: scale(0.88); /* Mantiene las proporciones coquette perfectas */
   }
 }
