@@ -37,7 +37,7 @@ const songs = [
   { src: "music/sinti.mp3", cover: "fotos/sinti.png", title: "Sin Ti - Nostalgia Tropical", artist: "Los Panchos" , lyrics: "lyrics/sinti.txt" },
   { src: "music/lachata.mp3", cover: "fotos/ch.png", title: "La Chata - Infectado", artist: "Amén" , lyrics: "lyrics/lachata.txt"},
   { src: "music/arewe.mp3", cover: "fotos/are.png", title: "ARE WE STILL FRIENDS? - IGOR", artist: "Tyler, The Creator" , lyrics: "lyrics/arewes.txt" },
-  { src: "music/505.mp3", cover: "fotos/505.png", title: "505 - Arctic Monkeys", artist: "505" , lyrics: "lyrics/505.txt" },
+  { src: "music/505.mp3", cover: "fotos/505.png", title: "505 - Favourite Worst Nightmare", artist: "Arctic Monkeys" , lyrics: "lyrics/505.txt" },
   { src: "music/virus2.mp3", cover: "fotos/sin.png", title: "Sin Disfraz - Locura", artist: "Virus" , lyrics: "lyrics/sin.txt" }
 ];
 
