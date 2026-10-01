@@ -295,6 +295,21 @@ button:active {
   font-family: "MS Sans Serif", sans-serif;
 }
 
+
+.el-contenedoruwu p { 
+    margin: 0; 
+    color: rgb(0, 0, 0); 
+    text-align: center; 
+} 
+
+.el-contenedoruwu { 
+    box-sizing: border-box; 
+    width: 100%; 
+    max-width: 400px; 
+    padding: 5px; 
+    text-align: center; 
+}
+
 /* ==========================================================================
    GIF DE ESTRELLAS DE FONDO
    ========================================================================== */

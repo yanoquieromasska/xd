@@ -18,8 +18,10 @@ body {
     align-items: center; 
     gap: 15px;          
     position: relative;
+    width: 100%;             /* 🟢 AGREGA ESTO: Ocupa todo el ancho disponible */
+    max-width: 100vw;        /* 🟢 AGREGA ESTO: Evita que se salga de la pantalla */
+    box-sizing: border-box;  /* 🟢 AGREGA ESTO: Controla los márgenes internos */
 }
-
 /* ==========================================================================
    REPRODUCTOR PRINCIPAL
    ========================================================================== */
@@ -348,25 +350,32 @@ button:active {
 /* ==========================================================================
    RESPONSIVE - ACHICA TODO EN CONJUNTO EN TABLETS Y CELULARES
    ========================================================================== */
+/* ==========================================================================
+   RESPONSIVE CORREGIDO - EVITA QUE SE CORTE LA PARTE DERECHA
+   ========================================================================== */
 @media (max-width: 600px) { 
     body { 
         min-height: 100vh; 
+        justify-content: center;
+        align-items: center;
     } 
     .contenedor-padre { 
-        transform: scale(0.65); 
-        transform-origin: center center; 
+        /* Usamos zoom en lugar de scale porque el zoom adapta los bordes 
+           automáticamente en los navegadores móviles de forma limpia */
+        zoom: 0.65; 
     } 
 }
 
 /* Celulares un poco más grandes */
 @media (min-width: 401px) and (max-width: 600px) { 
     .contenedor-padre { 
-        transform: scale(0.75); 
+        zoom: 0.75; 
     } 
 }
 
-/* Tablets (La pantalla de tu amiga) */
-@media (min-width: 601px) and (max-width: 900px) { }
+/* Tablets (Como la de tu amiga) */
+@media (min-width: 601px) and (max-width: 900px) { 
     .contenedor-padre { 
-        transform: scale(0.88); 
-    }
+        zoom: 0.88; 
+    } 
+}
