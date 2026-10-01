@@ -34,9 +34,8 @@ const songs = [
   { src: "music/imstill.mp3", cover: "fotos/imstillhere.png", title: "I¨m Still Here - Still Here", artist: "The Notations" , lyrics: "lyrics/im.txt" },
   { src: "music/atadoaunsentimiento.mp3", cover: "fotos/at.png", title: "Atado a un Sentimiento - Cóctel", artist: "Miguel Mateos & Zas" , lyrics: "lyrics/atad.txt"},
   { src: "music/sinti.mp3", cover: "fotos/sinti.png", title: "Sin Ti - Nostalgia Tropical", artist: "Los Panchos" , lyrics: "lyrics/sinti.txt" },
-  { src: "music/lachata.mp3", cover: "fotos/ch.png", title: "La Chata - Infectado", artist: "Amén" , lyrics: "lyrics/lachata.txt"},
   { src: "music/arewe.mp3", cover: "fotos/are.png", title: "ARE WE STILL FRIENDS? - IGOR", artist: "Tyler, The Creator" , lyrics: "lyrics/arewes.txt" },
-   { src: "music/505.mp3", cover: "fotos/505.png", title: "505 - Favorite Worst Nightmare", artist: "Arctic Monkeys" , lyrics: "lyrics/505.txt" },
+  { src: "music/505.mp3", cover: "fotos/505.png", title: "505 - Favorite Worst Nightmare", artist: "Arctic Monkeys" , lyrics: "lyrics/505.txt" },
   { src: "music/virus2.mp3", cover: "fotos/sin.png", title: "Sin Disfraz - Locura", artist: "Virus" , lyrics: "lyrics/sin.txt" }
 ];
 
